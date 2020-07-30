@@ -9,4 +9,10 @@ app.innerHTML = `<h1>Javascript DOM</h1>`;
 })
 window.addEventListener('load',()=>alert('load'))
 */
+console.log(document.documentElement)
+console.dir(document.documentElement)
 
+console.log(document.head)
+console.dir(document.body)
+console.log(document.body.constructor.name)
+console.log(document.body)
