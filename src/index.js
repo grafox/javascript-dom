@@ -1,42 +1,17 @@
 import '../assets/css/style.css';
 
-const app = document.getElementById('app');
+const app = document.getElementById('app')
 
-function createInputDOM({label,type='text'}){
-    const labelEl = document.createElement('label')
-    const inputEl = document.createElement('input')
+app.innerHTML = `<h1>Javascript DOM</h1>`
+const div = document.createElement('div')
+const span = document.createElement('span')
+const p = document.createElement('p')
+const i = document.createElement('i')
+const b = document.createElement('b')
+div.append(span)
+div.prepend(p)
 
-    inputEl.type = type
-    labelEl.innerText = label
-    labelEl.append(inputEl)
-    return labelEl
-}
-
-const inputFromDom = createInputDOM({label:'name',})
-console.log(inputFromDom)
-app.append(inputFromDom)
-
-function createInputTemplate({label,type='text'}){
-    return`
-    <label>
-    ${label}
-    <input type="${type}"
-    </label>
-    `
-}
-
-const inputFromTemplate = createInputTemplate({label:'Email',type:'email'})
-app.innerHTML += inputFromTemplate
-
-const data = ['Earth','fire','water','Air']
-const fragment = document.createDocumentFragment()
-console.dir(fragment)
-
-data.forEach(name=>{
-    const li = document.createElement('li')
-    li.innerText = name
-  //  app.append(li)
-    fragment.append(li)
-})
-
-app.append(fragment)
+span.before(i)
+p.after(i)
+i.parentNode.insertBefore(b,i.nextSibling)
+console.log(div,span);
