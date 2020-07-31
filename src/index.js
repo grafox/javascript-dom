@@ -1,37 +1,7 @@
 import '../assets/css/style.css';
 
-
-// app.innerHTML = `<h1>Javascript DOM</h1>`;
-
-/* document.addEventListener('DomContentloaded',()=>{
-    alert('DomContentloaded')
-})
-window.addEventListener('load',()=>alert('load'))
-*/
-/* console.log(document.documentElement)
-console.dir(document.documentElement)
-
-console.log(document.head)
-console.dir(document.body)
-console.log(document.body.constructor.name)
-console.log(document.body)
- */
 const app = document.getElementById('app');
 
-/* const div = document.createElement('div')
-const text = document.createTextNode('DOM!')
-const commet = document.createComment('No commet')
-app.append(div)
-app.append(commet)
-div.append(text)
-app.append('h1')
-console.log(app,div,text)
-console.log(app.innerHTML)
-console.log(app.textContent)
-
-app.innerText = '<span> Hello</span>'
-app.innerHTML = '<span> Hello</span>'
- */
 function createInputDOM({label,type='text'}){
     const labelEl = document.createElement('label')
     const inputEl = document.createElement('input')
@@ -54,6 +24,19 @@ function createInputTemplate({label,type='text'}){
     </label>
     `
 }
-const inputFromTemplate = createInputTemplate({label:'Email',type:'email'})
 
+const inputFromTemplate = createInputTemplate({label:'Email',type:'email'})
 app.innerHTML += inputFromTemplate
+
+const data = ['Earth','fire','water','Air']
+const fragment = document.createDocumentFragment()
+console.dir(fragment)
+
+data.forEach(name=>{
+    const li = document.createElement('li')
+    li.innerText = name
+  //  app.append(li)
+    fragment.append(li)
+})
+
+app.append(fragment)
