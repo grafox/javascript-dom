@@ -13,4 +13,3 @@ data.forEach(item =>{
     li.innerText = item
     fargment.append(li)
 })
-
