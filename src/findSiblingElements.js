@@ -11,7 +11,7 @@ app.innerHTML = `<h1>Javascript DOM</h1>
 `
 const listItem = document.querySelector('#list li')
 console.log(listItem.nextSibling)
-console.log(listItem.previousSibling);
+console.log(listItem.previousSibling)
 
-console.log(listItem.nextElementSibling);
-console.log(listItem.previousElementSibling);
+console.log(listItem.nextElementSibling)
+console.log(listItem.previousElementSibling)
