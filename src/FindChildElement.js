@@ -9,3 +9,16 @@ app.innerHTML = `<h1>Javascript DOM</h1>
     <li>Air</li>
 </ul>
 `
+const list = document.querySelector('#list')
+const selectedIndex = 2
+//querySelectorAll
+const queryChildern = list.querySelectorAll('li')
+console.log(queryChildern,queryChildern.length)
+//.children: HTMLCollection
+console.log(list.children);
+//.childNodes: NodeList
+console.log(list.childNodes);
+
+console.log(list.children[selectedIndex]);
+console.log(list.firstChild);
+console.log(list.lastChild);
