@@ -40,7 +40,7 @@ function handleSubmit(event){
     event.preventDefault()
     //query string
     // Content-Type = application/x-www-form-URLencoded
-    // fullname=Todd+Motto&pizza=pepperoni&size=large&quary
+    // fullname=Gassan+Jabbar&pizza=pepperoni&size=large&quary
     const formData = new FormData(event.target)
 
     const asString = new URLSearchParams(formData)
