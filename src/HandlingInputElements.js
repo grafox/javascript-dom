@@ -26,4 +26,5 @@ input.addEventListener('change', ()=> console.log('Change'))
 
 // Methods
 // focus an input
-input.focus(()=> input.blur(),2000)
+input.focus()
+setTimeout(()=> input.blur(),2000)
